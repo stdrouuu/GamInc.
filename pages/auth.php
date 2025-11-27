@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./assets/css/auth-style.css" />
+
+<body>
+      <div class="login-box">
+        <h2>Log in to NeoGame</h2>
+        <p>Enter your account to continue.</p>
+
+        <div class="error" id="errorMsg">Invalid username or password.</div>
+
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button id="loginBtn">Log In</button>
+      </div>
+    </div>
+    <script src="assets/js/auth.js"></script>
+  </body>

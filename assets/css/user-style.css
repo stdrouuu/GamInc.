@@ -1,0 +1,640 @@
+/* GAYA UMUM */
+:root {
+  --bg-dark: #0a0a0a;
+  --card-dark: #1a1a1a;
+  --neon-blue: #00e6e0; /* WARNA BARU: #00e6e0 */
+  --text-light: #ffffff;
+  --text-secondary: #cccccc;
+  --red-alert: #dc2626;
+  --blue-link: #3b82f6; /* Warna biru untuk tautan */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Container dan Layout Utama */
+.user-page-container {
+  max-width: 900px;
+  margin: 100px auto 40px; /* Memberi ruang di atas untuk fixed button */
+  padding: 0 20px;
+}
+
+.card-box {
+  background-color: var(--card-dark);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333;
+}
+
+.back-button {
+  position: fixed;
+  top: 25px;
+  left: 20px;
+  z-index: 900;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  background-color: rgba(0, 230, 224, 0.1); /* RGBA BARU */
+  border: 1px solid rgba(0, 230, 224, 0.4); /* RGBA BARU */
+  border: none;
+
+  transition: all 0.3s ease;
+}
+
+.back-button i {
+  color: var(--neon-blue); /* Warna Baru */
+  font-size: 1.2rem;
+}
+
+.back-button:hover {
+  background-color: rgba(0, 230, 224, 0.3); /* RGBA BARU */
+  color: var(--neon-blue); /* Warna Baru */
+}
+
+/* --- HEADER AKUN --- */
+.account-header {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  background-color: var(--neon-blue); /* Warna Baru */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--bg-dark);
+  margin-right: 15px;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.level-badge {
+  font-size: 0.8rem;
+  background-color: #374151;
+  color: var(--text-secondary);
+  padding: 2px 8px;
+  border-radius: 15px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.stats-bar {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #374151;
+  border-bottom: 1px solid #374151;
+  margin-bottom: 15px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.stat-item i {
+  color: var(--neon-blue); /* Warna Baru */
+  margin-right: 5px;
+}
+
+/* EXP Bar Styling */
+.exp-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-text {
+  font-size: 0.85rem;
+  color: var(--neon-blue); /* Warna Baru */
+  min-width: 60px;
+}
+
+.exp-progress {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #374151;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background-color: var(--neon-blue); /* Warna Baru */
+  transition: width 0.5s;
+}
+
+.exp-chest {
+  font-size: 1.5rem;
+  color: #f59e0b;
+}
+
+
+/* --- DOMPET DIGITAL --- */
+.wallet-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px 15px;
+}
+
+.wallet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px dashed #374151;
+  border-radius: 8px;
+}
+
+.wallet-item i {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.icon-dana {
+  color: var(--blue-link);
+}
+.icon-ovo {
+  color: #8b5cf6;
+}
+.icon-dompetku {
+  color: var(--neon-blue); /* Warna Baru */
+}
+
+.balance {
+  font-weight: 600;
+  color: var(--neon-blue); /* Warna Baru */
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.btn-link {
+  background: none;
+  border: 1px solid var(--blue-link);
+  color: var(--blue-link);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-link:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* --- ACTION & INFO SECTION --- */
+.action-and-info-section {
+  margin-bottom: 20px;
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: var(--card-dark);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-link:hover {
+  background-color: #2a2a2a;
+}
+
+.card-link i:first-child {
+  font-size: 1.3rem;
+  margin-right: 15px;
+}
+
+.card-link span {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+/* Info Alert */
+.info-alert {
+  background-color: #333333;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid var(--red-alert);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.info-alert i {
+  color: var(--red-alert);
+  font-size: 1.5rem;
+}
+
+.info-alert p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.info-alert a {
+  color: var(--blue-link);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.alert-actions a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-self: center;
+}
+
+.btn-agree {
+  background-color: var(--blue-link);
+  color: var(--text-light);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+/* --- RIWAYAT & MENU LIST --- */
+.activity-section {
+  margin-bottom: 20px;
+}
+
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-title-row h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.section-title-row a {
+  color: var(--neon-blue); /* Warna Baru */
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.activity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.activity-icon {
+  font-size: 1.8rem;
+  color: var(--neon-blue); /* Warna Baru */
+  margin-bottom: 5px;
+}
+
+/* Menu List */
+.list-menu-section,
+.help-section {
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+.help-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.menu-list-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 5px;
+  border-bottom: 1px solid #333;
+  text-decoration: none;
+  color: var(--text-light);
+  transition: background-color 0.3s;
+}
+
+.menu-list-item:hover {
+  background-color: #111;
+}
+
+.menu-icon {
+  font-size: 1.3rem;
+  color: var(--neon-blue); /* Warna Baru */
+  min-width: 30px;
+  margin-right: 15px;
+}
+
+.menu-list-item span {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.arrow-icon {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* --- LOGOUT BUTTON SPECIFIC STYLES --- */
+#logoutBtn {
+  border-bottom: none;
+}
+
+#logoutBtn:hover {
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+#logoutBtn:hover span {
+  color: var(--red-alert);
+}
+
+/* ================================================= */
+/* --- MODAL LOGOUT KUSTOM (ARE YOU SURE) --- */
+/* ================================================= */
+
+/* Overlay Modal (Latar Belakang Blur) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* Konten Pop-up */
+.modal-content {
+  background-color: var(--card-dark);
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+}
+
+.modal-content h3 {
+  color: var(--neon-blue); /* Warna Baru */
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.btn-cancel,
+.btn-confirm {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-cancel {
+  background-color: #374151;
+  color: var(--text-light);
+  border: none;
+}
+
+.btn-cancel:hover {
+  background-color: #4b5563;
+}
+
+.btn-confirm {
+  background-color: var(--red-alert);
+  color: var(--text-light);
+  border: none;
+}
+
+.btn-confirm:hover {
+  background-color: #ef4444;
+}
+
+
+/* ================================================= */
+/* --- MEDIA QUERIES UNTUK RESPONSIVE DESIGN --- */
+/* ================================================= */
+
+/* Responsif Umum (Laptop Kecil & Tablet) */
+@media (max-width: 992px) {
+  .user-page-container {
+    max-width: 768px;
+  }
+}
+
+
+/* Tablet & Mobile Landscape (Max Width: 768px) */
+@media (max-width: 768px) {
+  .user-page-container {
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+
+  /* 1. Header Akun */
+  .account-header {
+    padding: 15px;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    margin: 0 auto 10px;
+  }
+
+  /* 2. Dompet Digital */
+  .wallet-section {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .wallet-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: none;
+  }
+
+  .wallet-item i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  .wallet-item span:nth-child(2) {
+    flex-grow: 1;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .balance {
+    margin-top: 0;
+  }
+
+  /* 3. Riwayat Aktivitas */
+  .activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .activity-item {
+    padding: 15px 5px;
+    font-size: 0.9rem;
+  }
+
+  /* 4. Info Alert */
+  .info-alert {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .info-alert p {
+    flex-grow: unset;
+    font-size: 0.9rem;
+  }
+
+  .alert-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Tombol Kembali */
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Mobile Portrait (Max Width: 480px) */
+@media (max-width: 480px) {
+  /* 1. Header Akun */
+  .user-name {
+    font-size: 1.3rem;
+  }
+  .level-badge {
+    font-size: 0.75rem;
+  }
+  .stats-bar {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* 2. Tombol Kembali: Sembunyikan tulisan 'Kembali' */
+  .back-button span {
+    display: none;
+  }
+  .back-button {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  /* 3. Riwayat Aktivitas: Ubah dari 2 kolom menjadi 1 kolom */
+  .activity-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .activity-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .activity-icon {
+    margin-bottom: 0;
+  }
+}
