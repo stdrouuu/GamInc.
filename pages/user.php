@@ -34,19 +34,6 @@
             </div>
         </div>
 
-        <div class="action-and-info-section">
-            
-
-            <div class="info-alert">
-                <i class="fas fa-exclamation-circle text-red"></i>
-                <p>Saldo Anda Tidak Mencukupi</p>
-                <div class="alert-actions">
-                    <a href="#">Ingatkan Nanti</a>
-                    <button class="btn-agree">Top-up sekarang</button>
-                </div>
-            </div>
-        </div>
-
         <div class="activity-section">
             <div class="section-title-row">
                 <a href="#">See Order Details <i class="fas fa-chevron-right small-icon"></i></a>

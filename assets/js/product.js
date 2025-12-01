@@ -17,6 +17,8 @@ function createProductCard(product) {
     badge = `<span class="badge playstation">PLAYSTATION</span>`;
   } else if (product.category === "Switch2") {
     badge = `<span class="badge switch2">SWITCH 2</span>`;
+  } else if (product.category === "Other") {
+    badge = `<span class="badge other">OTHER</span>`;
   }
 
   card.innerHTML = `

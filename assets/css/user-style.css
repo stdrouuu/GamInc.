@@ -191,61 +191,10 @@ body {
   font-weight: 500;
 }
 
-/* Info Alert */
-.info-alert {
-  background-color: #333333;
-  padding: 15px;
-  border-radius: 10px;
-  border-left: 5px solid var(--red-alert);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.info-alert i {
-  color: var(--red-alert);
-  font-size: 1.5rem;
-}
-
-.info-alert p {
-  flex-grow: 1;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-}
-
-.info-alert a {
-  color: var(--blue-link);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.alert-actions {
-  display: flex;
-  gap: 10px;
-  white-space: nowrap;
-}
-
-.alert-actions a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  align-self: center;
-}
-
-.btn-agree {
-  background-color: var(--blue-link);
-  color: var(--text-light);
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: opacity 0.3s;
-}
 
 /* --- RIWAYAT & MENU LIST --- */
 .activity-section {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .section-title-row {
@@ -282,7 +231,7 @@ body {
 
 .activity-icon {
   font-size: 1.8rem;
-  color: var(--neon-blue); 
+  color: var(--text-secondary); 
   margin-bottom: 5px;
 }
 

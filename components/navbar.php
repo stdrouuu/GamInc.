@@ -8,7 +8,7 @@
         </div>
      
         <div class="nav-user">
-          <a href="index.php?page=user" class="user-icon">
+          <a href="index.php?page=user" class="user-icon" >
             <i class="fa-solid fa-toggle-off"></i>
           </a>
         </div>

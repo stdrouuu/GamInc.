@@ -140,6 +140,19 @@ body {
   z-index: 10;
 }
 
+.badge.other {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #a200ff;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 10;
+}
+
 .add-to-cart {
   background: transparent;
   color: #00e6e0; 
@@ -150,7 +163,6 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
   width: 100%;
-  box-shadow: 0 0 15px rgba(0, 230, 224, 0.2);
 }
 
 .add-to-cart:hover {

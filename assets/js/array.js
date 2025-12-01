@@ -153,11 +153,11 @@ const products = [
     },
     {
         id: 20,
-        name: "PlayStation Pulse Elite Wireless Headset - Black",
-        price: 2498000,
-        image: "./assets/img/headset.jpg",
-        category: "Playstation",
-        description: "A wireless headset with clear audio, deep bass, and a comfortable build for long gaming sessions."
+        name: "Miyoo Mini Plus Retro Game Portable Handheld - Purple",
+        price: 875000,
+        image: "./assets/img/miyoo.jpg",
+        category: "Other",
+        description: "Miyoo Mini Plus Retro Game Console, Portable Handheld Open Source Game Console with Storage Case,3.5″ HD Display,Compatible with a Large Variety of Classic Games."
     },
     {
         id: 21,
@@ -196,7 +196,7 @@ const products = [
         name: "Steam Wallet Gift Card (IDR 60.000) - Digital",
         price: 63300,
         image: "./assets/img/steam.jpg",
-        category: "-",
+        category: "Other",
         description: "Add funds to your Steam account for games, items, and marketplace purchases."
     },
     {
@@ -212,7 +212,7 @@ const products = [
         name: "PlayStation Network Card IDR 200.000 - Digital",
         price: 303300,
         image: "./assets/img/steam.jpg",
-        category: "-",
+        category: "Other",
         description: "Instant digital code for PlayStation Store purchases worth IDR 200.000."
     }
 ];

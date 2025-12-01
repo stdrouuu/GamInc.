@@ -168,8 +168,11 @@
             </div>
 
             <div class="grid-item">
-              <img src="./assets/img/banner2.jpg"/>
+              <a href="index.php?page=gameview&id=20">
+                <img src="./assets/img/banner2.jpg"/>
+              </a>
             </div>
+            
           </div>
         </div>
       </div>
