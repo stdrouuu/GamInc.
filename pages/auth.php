@@ -2,8 +2,8 @@
 
 <body>
       <div class="login-box">
-        <h2>Log in to NeoGame</h2>
-        <p>Enter your account to continue.</p>
+        <h2>Log in to GamInc.</h2>
+        <p>Enter your account to continue !</p>
 
         <div class="error" id="errorMsg">Invalid username or password.</div>
 

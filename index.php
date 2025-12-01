@@ -4,13 +4,17 @@
     <div class="container-fluid">
 
         <?php
-            $page = 'main'; 
-            $content = "pages/main.php"; 
+            $page = 'auth'; 
+            $content = "pages/auth.php"; 
 
             if(isset($_GET['page'])){
                 $page = $_GET['page'];
 
                 switch($page){
+                    case "main": 
+                        $content = "pages/main.php"; 
+                        break;
+
                     case "product": 
                         $content = "pages/product.php"; 
                         break;
@@ -19,10 +23,6 @@
                         $content = "pages/user.php"; 
                         break; 
 
-                    case "auth": 
-                        $content = "pages/auth.php"; 
-                        break;
-
                     case "gameview": 
                         $content = "pages/gameview.php"; 
                         break;
@@ -30,12 +30,9 @@
                     case "credits": 
                         $content = "pages/credits.php"; 
                         break;
-
-                    default: 
+                    default:
                         $content = "pages/main.php";
                 }
-            } else {
-                $content = "pages/main.php";
             }
         ?>
 
@@ -52,7 +49,7 @@
         </section>
 
         <?php 
-        if ($page != 'auth' && $page != 'user' && $page != 'gameview') {
+        if ($page != 'auth' && $page != 'user' && $page != 'gameview' && $page != 'credits') {
             include('components/footer.php');
         }
         ?>

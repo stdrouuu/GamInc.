@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: black;
+  background: rgb(10, 10, 10);
   color: #fff;
   overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ body {
   padding: 10px 15px;
   border-radius: 8px;
 
-  background-color: rgba(0, 230, 224, 0.1); 
+  background-color: rgba(0, 230, 224, 0.1);
   border: 1px solid rgba(0, 230, 224, 0.4);
   border: none;
 
@@ -36,18 +36,18 @@ body {
 }
 
 .back-button i {
-  color: #00e6e0;
+  color: #00cec9;
   font-size: 1.2rem;
 }
 
 .back-button:hover {
   background-color: rgba(0, 230, 224, 0.3);
-  color: #00e6e0;
+  color: #00cec9;
 }
 
 .hero {
   text-align: center;
-  padding-top: 8rem;
+  padding-top: 10rem;
   padding-bottom: 6rem;
   position: relative;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .highlight {
-  color: #46c9c4;
+  color: #00cec9;
 }
 
 .hero p {
@@ -93,7 +93,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #46c9c4;
+  background-color: #00cec9;
   color: #000;
 }
 
@@ -105,7 +105,8 @@ body {
 
 .btn-primary:hover,
 .btn-secondary:hover {
-  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 230, 224, 0.4);
 }
 
 .socials {
@@ -121,16 +122,4 @@ body {
 
 .socials a:hover {
   color: #878787;
-}
-
-.footer {
-  background: #1a1a1a;
-  padding: 2rem 0;
-  text-align: center;
-  border-top: 1px solid #333;
-  box-shadow: 0 -5px 25px rgba(0, 230, 224, 0.1);
-}
-
-.footer p {
-  color: #666;
 }

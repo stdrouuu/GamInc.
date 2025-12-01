@@ -5,40 +5,45 @@
     <span>Back</span>
 </a>
 
-<div class="product-container">
-
+<div class="product-card">
     <div class="product-gallery">
         <div class="main-image">
-            <img src="{{product.image}}" alt="{{product.name}}" id="mainProductImage">
+            <img src="" alt="Product Image" id="mainProductImage">
         </div>
     </div>
 
     <div class="product-details">
-        <p class="product-brand">Product Brand / <b>PlayStation</b></p>
+        <p class="product-brand" id="productBrand">Product Brand</p>
 
-        <h1 class="product-title">{{product.name}}</h1>
+        <h1 class="product-title" id="productTitle">Product Title</h1>
 
         <div class="price-section">
-            <p class="old-price">{{product.oldPrice}}</p>
-            <p class="current-price">{{product.price}}</p>
+            <p class="current-price" id="productPrice">Rp -</p>
         </div>
 
         <hr>
 
-        <p class="enhancements">
-            {{product.enhancements}}
-        </p>
+        <p class="description" id="description">-</p>
 
-        <button class="add-to-cart" id="addToCartBtn">ADD TO CART</button>
+        <button class="add-to-cart" id="addToCart" onclick=addToCart();>ADD TO CART</button>
 
         <hr>
 
         <div class="metadata">
-            <p><strong>SKU:</strong> <span>{{product.sku}}</span></p>
-            <p><strong>CATEGORIES:</strong> <span>{{product.category}}</span></p>
-            <p><strong>TAGS:</strong> <span>{{product.tags}}</span></p>
+            <p><strong>SKU:</strong> <span class="sku" id="sku">-</span></p>
+            <p><strong>CATEGORIES:</strong> <span class="category" id="category">-</span></p>
+            <p><strong>TAGS:</strong> <span class="tags" id="tags">-</span></p>
+        </div>
+
+        <div class="social-share">
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="index.php?page=product#cart"><i class="fa-solid fa-shopping-cart"></i></a>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
     </div>
 </div>
 
-<script src="/assets/js/gameview.js"></script>
+<div id="notifContainer"></div>
+
+<script src="assets/js/array.js"></script>
+<script src="assets/js/gameview.js"></script>

@@ -25,7 +25,7 @@ body {
 /* Container dan Layout Utama */
 .user-page-container {
   max-width: 900px;
-  margin: 100px auto 40px; /* Memberi ruang di atas untuk fixed button */
+  margin: 100px auto 40px; 
   padding: 0 20px;
 }
 
@@ -34,8 +34,6 @@ body {
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid #333;
 }
 
 .back-button {
@@ -86,7 +84,6 @@ body {
 .profile-info {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
 }
 
 .avatar {
@@ -108,70 +105,6 @@ body {
   font-weight: 600;
 }
 
-.level-badge {
-  font-size: 0.8rem;
-  background-color: #374151;
-  color: var(--text-secondary);
-  padding: 2px 8px;
-  border-radius: 15px;
-  margin-top: 5px;
-  display: inline-block;
-}
-
-.stats-bar {
-  display: flex;
-  gap: 20px;
-  padding: 10px 0;
-  border-top: 1px solid #374151;
-  border-bottom: 1px solid #374151;
-  margin-bottom: 15px;
-}
-
-.stat-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-}
-
-.stat-item i {
-  color: var(--neon-blue); /* Warna Baru */
-  margin-right: 5px;
-}
-
-/* EXP Bar Styling */
-.exp-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.exp-text {
-  font-size: 0.85rem;
-  color: var(--neon-blue); /* Warna Baru */
-  min-width: 60px;
-}
-
-.exp-progress {
-  flex-grow: 1;
-  height: 8px;
-  background-color: #374151;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  width: 0%;
-  height: 100%;
-  background-color: var(--neon-blue); /* Warna Baru */
-  transition: width 0.5s;
-}
-
-.exp-chest {
-  font-size: 1.5rem;
-  color: #f59e0b;
-}
-
 
 /* --- DOMPET DIGITAL --- */
 .wallet-section {
@@ -186,9 +119,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 10px;
-  border: 1px dashed #374151;
-  border-radius: 8px;
+  border-radius: 15px;
 }
 
 .wallet-item i {
@@ -319,8 +250,7 @@ body {
 
 .section-title-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: end;
   margin-bottom: 15px;
 }
 
@@ -330,7 +260,7 @@ body {
 }
 
 .section-title-row a {
-  color: var(--neon-blue); /* Warna Baru */
+  color: var(--text-secondary); /* Warna Baru */
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -346,13 +276,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 15px 10px;
+  padding: 20px 5px;
   cursor: pointer;
 }
 
 .activity-icon {
   font-size: 1.8rem;
-  color: var(--neon-blue); /* Warna Baru */
+  color: var(--neon-blue); 
   margin-bottom: 5px;
 }
 
@@ -493,26 +423,14 @@ body {
 }
 
 
-/* ================================================= */
-/* --- MEDIA QUERIES UNTUK RESPONSIVE DESIGN --- */
-/* ================================================= */
 
-/* Responsif Umum (Laptop Kecil & Tablet) */
-@media (max-width: 992px) {
-  .user-page-container {
-    max-width: 768px;
-  }
-}
-
-
-/* Tablet & Mobile Landscape (Max Width: 768px) */
 @media (max-width: 768px) {
   .user-page-container {
     margin-top: 80px;
     padding: 0 15px;
+    max-width: 768px;
   }
 
-  /* 1. Header Akun */
   .account-header {
     padding: 15px;
   }
@@ -527,7 +445,6 @@ body {
     margin: 0 auto 10px;
   }
 
-  /* 2. Dompet Digital */
   .wallet-section {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -558,7 +475,6 @@ body {
     margin-top: 0;
   }
 
-  /* 3. Riwayat Aktivitas */
   .activity-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -569,7 +485,6 @@ body {
     font-size: 0.9rem;
   }
 
-  /* 4. Info Alert */
   .info-alert {
     flex-direction: column;
     align-items: flex-start;
@@ -578,7 +493,6 @@ body {
   }
 
   .info-alert p {
-    flex-grow: unset;
     font-size: 0.9rem;
   }
 
@@ -587,54 +501,10 @@ body {
     justify-content: space-between;
   }
 
-  /* Tombol Kembali */
   .back-button {
     top: 15px;
     left: 15px;
     padding: 8px 12px;
     font-size: 0.9rem;
-  }
-}
-
-
-/* Mobile Portrait (Max Width: 480px) */
-@media (max-width: 480px) {
-  /* 1. Header Akun */
-  .user-name {
-    font-size: 1.3rem;
-  }
-  .level-badge {
-    font-size: 0.75rem;
-  }
-  .stats-bar {
-    gap: 10px;
-    font-size: 0.9rem;
-  }
-
-  /* 2. Tombol Kembali: Sembunyikan tulisan 'Kembali' */
-  .back-button span {
-    display: none;
-  }
-  .back-button {
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    padding: 5px;
-  }
-
-  /* 3. Riwayat Aktivitas: Ubah dari 2 kolom menjadi 1 kolom */
-  .activity-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .activity-item {
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 15px;
-  }
-
-  .activity-icon {
-    margin-bottom: 0;
   }
 }

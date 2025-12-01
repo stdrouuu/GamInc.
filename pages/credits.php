@@ -8,13 +8,13 @@
  <section class="hero" id="about">
       <div class="hero-content">
         <div class="profile-pic">
-          <img src="./assets/img/gow.png" alt="Brandon J.S" />
+          <img src="./assets/img/brandon.jpg" alt="Brandon J.S" />
         </div>
         <h1>Hi, I am <br /><span class="highlight">Brandon J.S</span></h1>
         <p>
-          I'm a student who enjoys learning new things, building simple
-          projects, and figuring things out through trial and error. I’m not an
-          expert (yet), but I love improving little by little.
+          <span style="color: #00cec9"><strong>GamInc.</strong></span> is my personal learning experience project.  
+          I personally designed and coded this entire e-commerce site from scratch, 
+          serving as the sole developer to apply and master new skills."
         </p>
         <div class="buttons">
           <a href="#contact" class="btn-primary">Contact Me</a>
