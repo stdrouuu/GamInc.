@@ -1,13 +1,28 @@
-/* GAYA UMUM */
 :root {
   --bg-dark: #0a0a0a;
   --card-dark: #1a1a1a;
-  --neon-blue: #00e6e0; /* WARNA BARU: #00e6e0 */
+  --neon-blue: #00e6e0; 
   --text-light: #ffffff;
   --text-secondary: #cccccc;
   --red-alert: #dc2626;
-  --blue-link: #3b82f6; /* Warna biru untuk tautan */
+  --blue-link: #3b82f6; 
+  --back-btn-text: #fff; 
 }
+
+.light-mode {
+  --bg-dark: #f0f2f5;      
+  --card-dark: #ffffff;     
+
+  --text-light: #1f2937;   
+  --text-secondary: #6b7280; 
+
+  --neon-blue: #00b8b3;     
+  --blue-link: #2563eb;
+  
+  --red-alert: #dc2626;
+   --back-btn-text: #333333;     
+}
+
 
 * {
   margin: 0;
@@ -22,7 +37,6 @@ body {
   line-height: 1.6;
 }
 
-/* Container dan Layout Utama */
 .user-page-container {
   max-width: 900px;
   margin: 100px auto 40px; 
@@ -49,36 +63,35 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  color: white;
+  color: var(--back-btn-text); 
   padding: 10px 15px;
   border-radius: 8px;
 
-  background-color: rgba(0, 230, 224, 0.1); /* RGBA BARU */
-  border: 1px solid rgba(0, 230, 224, 0.4); /* RGBA BARU */
+  background-color: rgba(0, 230, 224, 0.1);
+  border: 1px solid rgba(0, 230, 224, 0.4); 
   border: none;
 
   transition: all 0.3s ease;
 }
 
 .back-button i {
-  color: var(--neon-blue); /* Warna Baru */
+  color: var(--neon-blue); 
   font-size: 1.2rem;
 }
 
 .back-button:hover {
-  background-color: rgba(0, 230, 224, 0.3); /* RGBA BARU */
-  color: var(--neon-blue); /* Warna Baru */
+  background-color: rgba(0, 230, 224, 0.3); 
+  color: var(--neon-blue); 
+  transform: translateX(-3px);
 }
 
-/* --- HEADER AKUN --- */
 .account-header {
-  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  background: linear-gradient(135deg, #4e828b 0%, #1f3b46 100%);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
 .profile-info {
@@ -87,7 +100,7 @@ body {
 }
 
 .avatar {
-  background-color: var(--neon-blue); /* Warna Baru */
+  background-color: var(--neon-blue); 
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -103,6 +116,7 @@ body {
 .user-name {
   font-size: 1.5rem;
   font-weight: 600;
+  color: #ffffff;
 }
 
 
@@ -253,19 +267,16 @@ body {
   display: flex;
   align-items: center;
   padding: 15px 5px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #3333335d;
   text-decoration: none;
   color: var(--text-light);
   transition: background-color 0.3s;
 }
 
-.menu-list-item:hover {
-  background-color: #111;
-}
 
 .menu-icon {
   font-size: 1.3rem;
-  color: var(--neon-blue); /* Warna Baru */
+  color: var(--neon-blue); 
   min-width: 30px;
   margin-right: 15px;
 }

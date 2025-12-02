@@ -2,7 +2,7 @@
 
 <body>
       <div class="login-box">
-        <h2>Log in to GamInc.</h2>
+        <h2>Log in to <span style="color: #ffffff">Gam</span>Inc.</h2>
         <p>Enter your account to continue !</p>
 
         <div class="error" id="errorMsg">Invalid username or password.</div>
@@ -14,3 +14,4 @@
     </div>
     <script src="assets/js/auth.js"></script>
   </body>
+

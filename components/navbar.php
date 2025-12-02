@@ -4,11 +4,11 @@
       <div class="nav-container">
         <div class="nav-logo">
           <i class="fa-solid fa-puzzle-piece"></i>
-          <strong>Gam<span style="color:aqua">Inc.</span></strong>
+          <strong>Gam<span style="color: #00ccc5ff">Inc.</span></strong>
         </div>
      
         <div class="nav-user">
-          <a href="index.php?page=user" class="user-icon" >
+          <a class="user-icon" onclick="toggleTheme()">
             <i class="fa-solid fa-toggle-off"></i>
           </a>
         </div>
@@ -71,3 +71,4 @@
 
 
     <script src="assets/js/navhamburger.js"></script>
+    <script src="assets/js/thtoggle.js"></script>

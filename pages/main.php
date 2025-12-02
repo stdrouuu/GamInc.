@@ -9,13 +9,13 @@
             <img src="./assets/img/banner7.jpg" class="d-block w-100"/>
           </div>
           <div class="carousel-item">
+            <img src="./assets/img/banner6.jpg" class="d-block w-100"/>
+          </div>
+          <div class="carousel-item">
             <img src="./assets/img/banner8.jpg" class="d-block w-100"/>
           </div>
           <div class="carousel-item">
             <img src="./assets/img/banner1.jpg" class="d-block w-100"/>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img/banner6.jpg" class="d-block w-100"/>
           </div>
           <div class="carousel-item">
             <img src="./assets/img/banner4.jpg" class="d-block w-100"/>
@@ -45,7 +45,6 @@
         </button>
       </div>
 
-      
       <!-- Featured Games Grid -->
       <div class="our-collection">
         <div class="container">
@@ -269,3 +268,5 @@
         </div>
       </div>
     </section>
+
+    

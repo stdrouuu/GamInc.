@@ -6,3 +6,5 @@
   </div>
 </footer>
 
+<script src="assets/js/thtoggle.js"></script>
+

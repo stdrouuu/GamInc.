@@ -47,3 +47,4 @@
 
 <script src="assets/js/array.js"></script>
 <script src="assets/js/gameview.js"></script>
+<script src="assets/js/thtoggle.js"></script>

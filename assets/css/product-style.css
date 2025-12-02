@@ -1,3 +1,50 @@
+:root {
+  --bg-body: #0a0a0a;
+  --bg-section-alt: #0d0d0d;
+
+  --text-main: #ffffff;
+  --text-muted: #eee;
+
+  --accent-color: #00e6e0;
+  --accent-glow: rgba(0, 230, 224, 0.5);
+  --accent-shadow-light: rgba(0, 230, 224, 0.1);
+
+  --card-bg: #1a1a1a;
+  --card-border: #333;
+
+  --table-bg: #151515;
+  --table-header: #1d1d1d;
+  --table-border: #222;
+
+  --input-bg: #222;
+  --input-border: #333;
+
+  --btn-checkout-bg: #d52525;
+  --btn-checkout-text: #fff;
+}
+
+.light-mode {
+  --bg-body: #ffffff;
+  --bg-section-alt: #f4f4f4; 
+
+  --text-main: #1a1a1a;
+  --text-muted: #333;
+
+  --accent-color: #00b3ae;
+  --accent-glow: rgba(0, 179, 174, 0.3);
+  --accent-shadow-light: rgba(0, 179, 174, 0.1);
+
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+
+  --table-bg: #ffffff;
+  --table-header: #f0f0f0;
+  --table-border: #e0e0e0;
+
+  --input-bg: #f8f8f8;
+  --input-border: #ccc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +55,8 @@ html {
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: var(--bg-body);
+  color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
@@ -28,13 +75,13 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
-  color: #00e6e0; /* Warna Baru */
-  text-shadow: 0 0 30px rgba(0, 230, 224, 0.5);
+  color: var(--accent-color);
+  text-shadow: 0 0 30px var(--accent-glow);
 }
 
 .products {
   padding: 100px 0;
-  background: #0a0a0a;
+  background: var(--bg-body);
 }
 
 .product-image .product-img {
@@ -62,13 +109,13 @@ body {
 }
 
 .product-card {
-  background: #1a1a1a;
+  background: var(--card-bg);
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid #333;
-  box-shadow: 0 5px 25px rgba(0, 230, 224, 0.1);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 5px 25px var(--accent-shadow-light);
 }
 
 .product-card-link {
@@ -80,36 +127,37 @@ body {
 
 .product-card:hover {
   transform: translateY(-5px);
+  /* Note: Shadow spesifik ini (0.2 alpha) tidak ada di root, jadi tetap hardcoded RGBA atau gunakan accent-shadow-light jika ingin sama persis */
   box-shadow: 0 10px 30px rgba(0, 230, 224, 0.2),
-    0 0 40px rgba(0, 230, 224, 0.1);
-  border-color: #00e6e0; /* Warna Baru */
+    0 0 40px var(--accent-shadow-light);
+  border-color: var(--accent-color);
 }
 
 .product-image {
   width: 100%;
   height: 200px;
-  background: #333;
+  background: var(--card-border); 
   border-radius: 10px;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  color: #00e6e0; /* Warna Baru */
+  color: var(--accent-color);
   box-shadow: 0 0 20px rgba(0, 230, 224, 0.2);
 }
 
 .product-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: var(--text-main);
   text-shadow: 0 0 10px rgba(0, 230, 224, 0.2);
 }
 
 .product-price {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #00e6e0; /* Warna Baru */
+  color: var(--accent-color);
   margin-bottom: 1rem;
   text-shadow: 0 0 15px rgba(0, 230, 224, 0.4);
 }
@@ -155,8 +203,8 @@ body {
 
 .add-to-cart {
   background: transparent;
-  color: #00e6e0; 
-  border: 2px solid #00e6e0; 
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
@@ -166,15 +214,15 @@ body {
 }
 
 .add-to-cart:hover {
-  background: #00e6e0; /* Warna Baru */
-  color: #0a0a0a;
-  box-shadow: 0 0 25px rgba(0, 230, 224, 0.5);
+  background: var(--accent-color);
+  color: var(--bg-body);
+  box-shadow: 0 0 25px var(--accent-glow);
 }
 
 /* Cart Section */
 .cart-section {
   padding: 80px 0;
-  background: #0d0d0d;
+  background: var(--bg-section-alt);
 }
 
 .cart-content {
@@ -186,22 +234,22 @@ body {
 .cart-table {
   width: 100%;
   border-collapse: collapse;
-  background: #151515;
+  background: var(--table-bg);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .cart-table th {
-  background: #1d1d1d;
+  background: var(--table-header);
   padding: 1rem;
-  color: #00e6e0;
+  color: var(--accent-color);
   font-weight: 600;
 }
 
 .cart-table td {
   padding: 1rem;
-  border-top: 1px solid #222;
-  color: #eee;
+  border-top: 1px solid var(--table-border);
+  color: var(--text-muted);
 }
 
 .item-info {
@@ -228,30 +276,30 @@ body {
   height: 28px;
   border-radius: 10px;
   border: none;
-  background: #00e6e0;
-  color: #0a0a0a;
+  background: var(--accent-color);
+  color: var(--bg-body);
   font-weight: 700;
 }
 
 .qty-input {
   width: 40px;
   text-align: center;
-  background: #222;
-  border: 1px solid #333;
-  color: #fff;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-main);
   border-radius: 5px;
   padding: 5px;
 }
 
 .cart-summary {
-  background: #151515;
+  background: var(--table-bg);
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid #222;
+  border: 1px solid var(--table-border);
 }
 
 .cart-summary h3 {
-  color: #00e6e0;
+  color: var(--accent-color);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -265,7 +313,7 @@ body {
 .summary-row.total {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--card-border);
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -274,14 +322,13 @@ body {
   width: 100%;
   padding: 12px;
   margin-top: 1rem;
-  background: #d52525;
+  background: var(--btn-checkout-bg);
   border: none;
-  color: #fff;
+  color: var(--btn-checkout-text);
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
 }
-
 
 #notifContainer {
   position: fixed;
@@ -291,8 +338,8 @@ body {
 }
 
 .notifAlert {
-  background: #00e6e0;
-  color: #0a0a0a;
+  background: var(--accent-color);
+  color: var(--bg-body);
   padding: 1rem 1.5rem;
   border-radius: 10px;
   font-weight: 600;
@@ -310,23 +357,7 @@ body {
   box-shadow: 0 8px 25px rgba(212, 45, 45, 0.4);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
-
   /* Umum */
   .section-title {
     font-size: 1.8rem;

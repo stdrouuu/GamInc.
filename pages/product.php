@@ -4,7 +4,7 @@
 <!-- Menu/Products Section -->
     <section id="menu" class="products">
       <div class="container">
-        <h2 class="section-title">Our Products</h2>
+        <h2 class="section-title"><br>Our Products</h2>
         <div class="products-grid" id="productsGrid">
           <!-- Products will be dynamically loaded here -->
         </div>

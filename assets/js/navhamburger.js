@@ -11,16 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.remove("active");
   };
 
-  // Buka ketika klik hamburger
   hamburger.addEventListener("click", openMenu);
 
-  // Klik area hitam = close
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {
       closeMenu();
     }
   });
 
-  // Klik link = close
   links.forEach(link => link.addEventListener("click", closeMenu));
 });

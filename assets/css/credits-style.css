@@ -1,3 +1,29 @@
+:root {
+  --bg-color: rgb(10, 10, 10);
+  --text-main: #ffffff;
+  --text-muted: #cccccc;
+  --accent-color: #00cec9;
+  --secondary-bg: #1e1e1e;
+  --social-color: #aeaeae;
+  --social-hover: #878787;
+  
+  --btn-text-color: #000;
+  --back-btn-text: #fff;
+  --back-btn-bg: rgba(0, 230, 224, 0.1);
+  --back-btn-border: rgba(0, 230, 224, 0.4);
+}
+
+.light-mode {
+  --bg-color: #ffffff;          
+  --text-main: #333333;       
+  --text-muted: #666666;         
+  --secondary-bg: #f9f9f9;      
+  --social-color: #666666;
+  --social-hover: #000000;
+
+  --back-btn-text: #333333;     
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +32,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: rgb(10, 10, 10);
-  color: #fff;
-  overflow-x: hidden;
+  background: var(--bg-color); 
+  color: var(--text-main);     
 }
 
 .back-button {
@@ -24,25 +49,24 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  color: white;
+  color: var(--back-btn-text); 
   padding: 10px 15px;
   border-radius: 8px;
 
-  background-color: rgba(0, 230, 224, 0.1);
-  border: 1px solid rgba(0, 230, 224, 0.4);
-  border: none;
+  background-color: var(--back-btn-bg);    
+  border: 1px solid var(--back-btn-border); 
 
   transition: all 0.3s ease;
 }
 
 .back-button i {
-  color: #00cec9;
+  color: var(--accent-color); 
   font-size: 1.2rem;
 }
 
 .back-button:hover {
-  background-color: rgba(0, 230, 224, 0.3);
-  color: #00cec9;
+  background-color: rgba(0, 230, 224, 0.3); 
+  color: var(--accent-color); 
 }
 
 .hero {
@@ -67,14 +91,14 @@ body {
 }
 
 .highlight {
-  color: #00cec9;
+  color: var(--accent-color); 
 }
 
 .hero p {
   max-width: 600px;
   margin: 1rem auto;
   line-height: 1.6;
-  color: #ccc;
+  color: var(--text-muted); 
 }
 
 .buttons {
@@ -93,20 +117,20 @@ body {
 }
 
 .btn-primary {
-  background-color: #00cec9;
-  color: #000;
+  background-color: var(--accent-color); 
+  color: var(--btn-text-color);         
 }
 
 .btn-secondary {
-  background: #1e1e1e;
-  border: 2px solid #46c9c4;
-  color: #46c9c4;
+  background: var(--secondary-bg);       
+  border: 2px solid var(--accent-color); 
+  color: var(--accent-color);           
 }
 
 .btn-primary:hover,
 .btn-secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 230, 224, 0.4);
+  box-shadow: 0 8px 25px var(--back-btn-border); 
 }
 
 .socials {
@@ -114,12 +138,12 @@ body {
 }
 
 .socials a {
-  color: #aeaeae;
+  color: var(--social-color); 
   margin: 0 0.8rem;
   font-size: 1.3rem;
   transition: 0.3s;
 }
 
 .socials a:hover {
-  color: #878787;
+  color: var(--social-hover); 
 }
