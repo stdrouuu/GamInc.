@@ -1,14 +1,38 @@
-const loginBtn = document.getElementById("loginBtn");
-const errorMsg = document.getElementById("errorMsg");
+// Auth login using AJAX
+$(document).ready(function () {
 
-loginBtn.addEventListener("click", () => {
-  let usr = document.getElementById("username").value.trim();
-  let psw = document.getElementById("password").value.trim();
+  $('#loginBtn').click(function () {
+    var username = $('#username').val();
+    var password = $('#password').val();
 
-  if (usr === "brandon" && psw === "1234") {
-    localStorage.setItem("loginName", usr);
-    window.location.href = "index.php?page=main";
-  } else {
-    errorMsg.style.display = "block";
-  }
+    if (username == '' || password == '') {
+      $('#errorMsg').text('Please fill in all fields.').show();
+      return;
+    }
+
+    $.ajax({
+      url: 'api/auth.php',
+      type: 'POST',
+      data: {
+        action: 'login',
+        username: username,
+        password: password
+      },
+      dataType: 'json',
+      success: function (response) {
+        if (response.success) {
+          window.location.href = 'index.php?page=main';
+        } else {
+          $('#errorMsg').text(response.message).show();
+        }
+      }
+    });
+  });
+
+  // Allow enter key to login
+  $('#password').keypress(function (e) {
+    if (e.which == 13) {
+      $('#loginBtn').click();
+    }
+  });
 });

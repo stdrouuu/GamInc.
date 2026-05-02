@@ -1,13 +1,12 @@
 :root {
   --bg-footer: #1a1a1a;
   --border-footer: #333333;
-  --c-text-muted: #666666;
+  --text-footer: #666666;
 }
-
 .light-mode {
-  --bg-footer: #dddddd;     
-  --border-footer: #e0e0e0;  
-  --c-text-muted: #555555;   
+  --bg-footer: #dddddd;
+  --border-footer: #e0e0e0;
+  --text-footer: #555555;
 }
 
 .footer {
@@ -15,9 +14,9 @@
   padding: 2rem 0;
   text-align: center;
   border-top: 1px solid var(--border-footer);
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .footer p {
-  color: var(--c-text-muted);
+  color: var(--text-footer);
 }

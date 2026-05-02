@@ -1,64 +1,50 @@
 :root {
-  --c-text-primary: #ffffff;     
-  --c-text-dark: #000000;         
-  --c-accent: #00e6e0;           
-  --c-dark-gray: #333333;         
-  
-  --bg-navbar: #00000021;                 
-  --bg-mobile-overlay: rgba(0, 0, 0, 0.438); 
-  
-  --c-badge: #dd0000;
+  --text-primary: #ffffff;
+  --text-dark: #000000;
+  --accent: #00e6e0;
+  --dark-gray: #333333;
+
+  --bg-navbar: #00000021;
+  --bg-mobile-overlay: rgba(0, 0, 0, 0.438);
+
+  --badge: #dd0000;
   --badge-shadow: rgba(230, 0, 0, 0.6);
 
-  --nav-max-width: 1200px;
-  --nav-height-padding: 12px;
-  --nav-side-padding: 25px;
-  --radius-md: 6px;
-  
-  --blur-nav: 10px;
-  --blur-overlay: 15px;
   --transition-default: all 0.3s ease;
-
-  --z-nav: 500;
-  --z-overlay: 900;
-  --z-hamburger: 10000;
 }
-
 .light-mode {
-  --c-text-primary: #1a1a1a;     
-  --c-text-dark: #ffffff;        
-  --c-accent: #008f8c;           
-  --c-dark-gray: #e0e0e0;         
-  
-  --bg-navbar: rgba(255, 255, 255, 0.75); 
+  --text-primary: #1a1a1a;
+  --text-dark: #ffffff;
+  --accent: #008f8c;
+  --dark-gray: #e0e0e0;
+
+  --bg-navbar: rgba(255, 255, 255, 0.75);
   --bg-mobile-overlay: rgba(255, 255, 255, 0.6);
 
   --badge-shadow: rgba(230, 0, 0, 0.3);
 }
 
-
 .navbar {
   position: fixed;
   width: 100%;
   background: var(--bg-navbar);
-  backdrop-filter: blur(var(--blur-nav));
-  z-index: var(--z-nav);
-  padding: var(--nav-height-padding) 0;
+  backdrop-filter: blur(10px);
+  z-index: 500;
+  padding: 12px 0;
   display: flex;
   justify-content: center;
 }
 
 .nav-container {
   width: 100%;
-  max-width: var(--nav-max-width);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--nav-side-padding);
+  padding: 0 25px;
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-/* LOGO */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -67,7 +53,6 @@
   font-size: 20px;
 }
 
-/* MENU */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -76,21 +61,20 @@
 }
 
 .nav-link {
-  color: var(--c-text-primary);
+  color: var(--text-primary);
   margin-top: 15px;
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition-default);
   position: relative;
-  border: 3px var(--c-text-dark);
+  border: 3px var(--text-dark);
 }
 
 .nav-link:hover {
-  color: var(--c-accent);
+  color: var(--accent);
   transform: translateY(-3px);
 }
 
-/* SEARCH BAR */
 .search-bar {
   flex: 1;
   max-width: 450px;
@@ -103,25 +87,24 @@
   width: 100%;
   padding: 9px 12px;
   border: none;
-  border-radius: var(--radius-md) 0 0 var(--radius-md);
-  background: #ffffff; /* Assuming white */
-  color: var(--c-text-dark);
+  border-radius: 6px 0 0 6px;
+  background: #ffffff;
+  color: var(--text-dark);
 }
 
 .search-bar button {
   padding: 9px 12px;
   border: none;
-  background: var(--c-dark-gray);
-  color: var(--c-text-primary);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--dark-gray);
+  color: var(--text-primary);
+  border-radius: 0 6px 6px 0;
   cursor: pointer;
 }
 
-/* ICONS */
 .cart-icon,
-.user-icon, 
+.user-icon,
 .hamburger-icon {
-  color: var(--c-text-primary);
+  color: var(--text-primary);
   font-size: 1.4rem;
   text-decoration: none;
   position: relative;
@@ -133,18 +116,17 @@
 }
 
 .cart-icon:hover,
-.user-icon:hover, 
+.user-icon:hover,
 .hamburger-icon:hover {
-  color: var(--c-accent);
+  color: var(--accent);
   transform: translateY(-3px);
 }
 
-/* CART COUNT */
 .cart-count {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: var(--c-badge);
+  background: var(--badge);
   color: #ffffff;
   border-radius: 50%;
   width: 20px;
@@ -157,14 +139,13 @@
   box-shadow: 0 0 15px var(--badge-shadow);
 }
 
-/* MOBILE MENU */
 .mobile-overlay {
   position: fixed;
   inset: 0;
   background: var(--bg-mobile-overlay);
-  backdrop-filter: blur(var(--blur-overlay));
+  backdrop-filter: blur(15px);
   display: none;
-  z-index: var(--z-overlay);
+  z-index: 900;
 }
 
 .mobile-overlay.active {
@@ -183,7 +164,7 @@
 .mobile-menu a {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--c-text-primary);
+  color: var(--text-primary);
   text-decoration: none;
   transition: 0.2s;
 }
@@ -195,37 +176,22 @@
 .hamburger-icon {
   font-size: 1.8rem;
   cursor: pointer;
-  color: var(--c-text-primary);
+  color: var(--text-primary);
   padding: 10px;
-  transition: var(--transition-default);
-  z-index: var(--z-hamburger);
+  transition: all 0.3s ease;
+  z-index: 10000;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 992px) {
-
   .nav-container {
     justify-content: space-between;
   }
-
   .nav-menu {
     display: none;
   }
-
   .search-bar {
     display: none;
   }
-
   .nav-hamburger {
     display: flex !important;
   }

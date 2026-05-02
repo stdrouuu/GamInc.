@@ -12,10 +12,8 @@
   --border-subtle: #222222;
   
   --btn-soft-bg: rgba(0, 206, 201, 0.1);
-  
   --shadow-glow: rgba(0, 230, 224, 0.4);
 }
-
 .light-mode {
   --bg-body: #f0f2f5;      
   --bg-card: #ffffff;       
@@ -29,9 +27,7 @@
   
   --border-subtle: #e5e7eb;
   
-  --btn-soft-bg: rgba(0, 181, 176, 0.1);
-  --btn-soft-hover: rgba(0, 181, 176, 0.2);
-  
+  --btn-soft-bg: rgba(0, 181, 176, 0.1);  
   --shadow-glow: rgba(0, 0, 0, 0.15); 
 }
 
@@ -42,7 +38,6 @@
   font-family: "Poppins", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
 }
-
 body {
   background-color: var(--bg-body);
   color: var(--text-main);
@@ -225,12 +220,10 @@ hr {
 }
 
 @media (max-width: 768px) {
-
   body {
     padding: 30px 20px;
     display: block; 
   }
-
   .back-button {
     top: 15px;
     left: 10px;
@@ -238,46 +231,37 @@ hr {
     font-size: 0.9rem;
     gap: 6px;
   }
-
   .back-button i {
     font-size: 1rem;
   }
-
   .product-card {
     flex-direction: column;
     padding: 25px;
     border-radius: 20px;
     margin-top: 40px;
   }
-
   .product-gallery {
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 25px;
   }
-
   .main-image {
     border-radius: 12px;
   }
-
   .product-title {
     font-size: 1.9em;
     margin-bottom: 10px;
   }
-
   .current-price {
     font-size: 1.6em;
   }
-
   .description {
     font-size: 0.95em;
     line-height: 1.5;
   }
-
   .metadata p {
     font-size: 0.85em;
   }
-
   .add-to-cart {
     width: 100%;
     max-width: unset;
@@ -285,117 +269,19 @@ hr {
     font-size: 1rem;
     border-radius: 12px;
   }
-
   .social-share {
     margin-top: 20px;
   }
-
   .social-share a {
     font-size: 1.3em;
     margin-right: 12px;
   }
-
-  /* NOTIF */
   #notifContainer {
     top: 70px;
     right: 10px;
   }
-
   .notifAlert {
     padding: 0.8rem 1.2rem;
     font-size: 0.9rem;
   }
 }
-
-.notifAlert.show {
-  opacity: 1;
-}
-
-
-
-
-
-
-@media (max-width: 768px) {
-
-  body {
-    padding: 30px 20px;
-    display: block; /* hilangkan center flex */
-  }
-
-  .back-button {
-    top: 15px;
-    left: 10px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    gap: 6px;
-  }
-
-  .back-button i {
-    font-size: 1rem;
-  }
-
-  .product-card {
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 40px;
-  }
-
-  .product-gallery {
-    max-width: 100%;
-    margin-right: 0;
-    margin-bottom: 25px;
-  }
-
-  .main-image {
-    border-radius: 12px;
-  }
-
-  .product-title {
-    font-size: 1.9em;
-    margin-bottom: 10px;
-  }
-
-  .current-price {
-    font-size: 1.6em;
-  }
-
-  .description {
-    font-size: 0.95em;
-    line-height: 1.5;
-  }
-
-  .metadata p {
-    font-size: 0.85em;
-  }
-
-  .add-to-cart {
-    width: 100%;
-    max-width: unset;
-    padding: 14px 20px;
-    font-size: 1rem;
-    border-radius: 12px;
-  }
-
-  .social-share {
-    margin-top: 20px;
-  }
-
-  .social-share a {
-    font-size: 1.3em;
-    margin-right: 12px;
-  }
-
-  /* NOTIF */
-  #notifContainer {
-    top: 70px;
-    right: 10px;
-  }
-
-  .notifAlert {
-    padding: 0.8rem 1.2rem;
-    font-size: 0.9rem;
-  }
-}
-

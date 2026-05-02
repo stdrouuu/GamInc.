@@ -129,7 +129,7 @@ const products = [
     },
     {
         id: 17,
-        name: "Nintendo Switch 2 Console",
+        name: "Nintendo Switch 2 Console - 512GB",
         price: 8099000,
         image: "./assets/img/switch2.jpg",
         category: "Switch2",
@@ -137,7 +137,7 @@ const products = [
     },
     {
         id: 18,
-        name: "Nintendo Switch JoyCon Controllers - Neon Green/Pink",
+        name: "Nintendo Switch JoyCon - Green/Pink",
         price: 350000,
         image: "./assets/img/switch2joycon.jpg",
         category: "Switch2",

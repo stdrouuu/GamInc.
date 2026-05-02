@@ -1,8 +1,7 @@
 <link rel="stylesheet" href="./assets/css/main-style.css" />
 
 
-<section class="hero" style>
-  <!-- bootsrap carousel -->
+    <!-- bootsrap carousel -->
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -45,7 +44,7 @@
         </button>
       </div>
 
-      <!-- Featured Games Grid -->
+      <!-- our collection -->
       <div class="our-collection">
         <div class="container">
           <h2 class="section-title">Our Collections</h2>
@@ -57,7 +56,7 @@
               </div>
               <h3>PS4 & PS5</h3>
               <p>Complete Game titles for PlayStation consoles !</p>
-              <button class="ourcollection-btn" onclick="scrollToSection('menu')">
+              <button class="ourcollection-btn">
                 View Details
               </button>
             </div>
@@ -68,7 +67,7 @@
               </div>
               <h3>Nintendo Switch 2</h3>
               <p>Variety of games available for the Nintendo console !</p>
-              <button class="ourcollection-btn" onclick="scrollToSection('menu')">
+              <button class="ourcollection-btn">
                 Pre-Order
               </button>
             </div>
@@ -79,17 +78,15 @@
               </div>
               <h3>Newest Games</h3>
               <p>Explore the latest and greatest game titles !</p>
-              <button class="ourcollection-btn" onclick="scrollToSection('menu')">
+              <button class="ourcollection-btn">
                 Browse All
               </button>
             </div>
-
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- NEW ARRIVAL -->
+    <!-- new arrival -->
     <div class="container">
       <div class="new-arrival">
         <div class="arrival-left-banner">
@@ -138,7 +135,7 @@
       </div>
     </div>
 
-    <!-- Galery Section -->
+    <!-- best selling games -->
       <div class="container">
         <h2 class="section-title">Best-Selling Games</h2>
             <div class="game-grid-container">
@@ -176,72 +173,78 @@
         </div>
       </div>
 
-    <!-- About Section -->
+    <!-- about -->
     <section id="about" class="about">
       <div class="container">
         <h2 class="section-title">About GamInc.</h2>
         <div class="about-content">
           <div class="about-text">
             <p>
-              GamInc. is your premier destination for PlayStation & Nintendo gaming
-              products. We specialize in providing the latest games, consoles,
-              and accessories to enhance your gaming experience.
+                GamInc. is your ultimate destination for premium PlayStation and Nintendo gaming products. 
+                We offer the latest games, consoles, and accessories designed to elevate your gaming experience.
             </p>
             <p>
-              With a passion for gaming and commitment to quality, we ensure
-              that every product meets the highest standards. Our mission is to
-              make gaming accessible and enjoyable for everyone.
+                Driven by a passion for gaming and a commitment to quality, we ensure that every product meets 
+                the highest standards. Our mission is to make gaming more accessible, enjoyable, and rewarding 
+                for everyone.
             </p>
+
             <div class="features">
-              <div class="feature-card">
-                <i class="fas fa-shipping-fast" style="color: #ff3441ff"></i>
-                <h4>Fast Delivery</h4>
-                <p>Quick and reliable shipping nationwide</p>
-              </div>
-              <div class="feature-card">
-                <i class="fas fa-circle-check" style="color: #44ef86ff"></i>
-                <h4>Authentic Products</h4>
-                <p>100% genuine PlayStation products</p>
-              </div>
-              <div class="feature-card">
-                <i class="fas fa-headset" style="color: #fbbf24"></i>
-                <h4>24/7 Support</h4>
-                <p>Customer support whenever you need it</p>
-              </div>
+                <div class="feature-card">
+                  <i class="fas fa-shipping-fast" style="color: #ff3441ff"></i>
+                  <h4>Fast Delivery</h4>
+                  <p>Quick and reliable shipping nationwide</p>
+                </div>
+                <div class="feature-card">
+                  <i class="fas fa-circle-check" style="color: #44ef86ff"></i>
+                  <h4>Authentic Products</h4>
+                  <p>100% certified, original, and ready for action</p>
+                </div>
+                <div class="feature-card">
+                  <i class="fas fa-headset" style="color: #fbbf24"></i>
+                  <h4>24/7 Support</h4>
+                  <p>Customer support whenever you need it</p>
+                </div>
             </div>
+            
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT  -->
+    <!-- contact us  -->
     <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title">Contact Us</h2>
         <div class="contact-content">
           <div class="contact-info">
+
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <div>
-                <h4>Email</h4>
-                <p>support.gaminc@gaminc.com</p>
-              </div>
+                <div>
+                  <h4>Email</h4>
+                  <p>support.gaminc@gaminc.com</p>
+                </div>
             </div>
+
             <div class="contact-item">
               <i class="fas fa-phone"></i>
-              <div>
-                <h4>Phone</h4>
-                <p>+62 812-3456-7890</p>
-              </div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>WhatsApp: +62 812-9999-9999</p>
+                </div>
             </div>
+
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>Address</h4>
-                <p>Jl. Gaminc Center No. 123, Jakarta Barat, Indonesia</p>
-              </div>
+                <div>
+                  <h4>Address</h4>
+                  <p>Jl. Gaminc Center No. 123, Jakarta Barat, Indonesia</p>
+                </div>
             </div>
+            
           </div>
+          
           <div class="map-card">
             <h4>Find Us</h4>
             <div class="map-wrapper">
@@ -256,7 +259,9 @@
               ></iframe>
             </div>
           </div>
+          
         </div>
+
         <div class="social-media">
           <h4>Follow Us</h4>
           <div class="social-icons">
@@ -266,7 +271,15 @@
             <a href="#" class="social-icon"><i class="fab fa-twitter" ></i></a>
           </div>
         </div>
+
+        <!-- Admin Login Link -->
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+          <a href="admin/login.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">
+            <i class="fas fa-user-shield"></i> Administrator Login
+          </a>
+        </div>
+
       </div>
     </section>
 
-    
+<script src="assets/js/thtoggle.js"></script>

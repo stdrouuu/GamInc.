@@ -22,10 +22,9 @@
   --btn-checkout-bg: #d52525;
   --btn-checkout-text: #fff;
 }
-
 .light-mode {
   --bg-body: #ffffff;
-  --bg-section-alt: #f4f4f4; 
+  --bg-section-alt: #f4f4f4;
 
   --text-main: #1a1a1a;
   --text-muted: #333;
@@ -62,14 +61,12 @@ body {
   position: relative;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Section Titles */
 .section-title {
   text-align: center;
   font-size: 2.5rem;
@@ -127,16 +124,14 @@ body {
 
 .product-card:hover {
   transform: translateY(-5px);
-  /* Note: Shadow spesifik ini (0.2 alpha) tidak ada di root, jadi tetap hardcoded RGBA atau gunakan accent-shadow-light jika ingin sama persis */
-  box-shadow: 0 10px 30px rgba(0, 230, 224, 0.2),
-    0 0 40px var(--accent-shadow-light);
+  box-shadow: 0 10px 30px var(--accent-shadow-light);
   border-color: var(--accent-color);
 }
 
 .product-image {
   width: 100%;
   height: 200px;
-  background: var(--card-border); 
+  background: var(--card-border);
   border-radius: 10px;
   margin-bottom: 1rem;
   display: flex;
@@ -144,7 +139,6 @@ body {
   justify-content: center;
   font-size: 3rem;
   color: var(--accent-color);
-  box-shadow: 0 0 20px rgba(0, 230, 224, 0.2);
 }
 
 .product-card h3 {
@@ -219,7 +213,6 @@ body {
   box-shadow: 0 0 25px var(--accent-glow);
 }
 
-/* Cart Section */
 .cart-section {
   padding: 80px 0;
   background: var(--bg-section-alt);
@@ -328,6 +321,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.checkout-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 45, 45, 0.4);
 }
 
 #notifContainer {
@@ -352,106 +351,76 @@ body {
   opacity: 1;
 }
 
-.checkout-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(212, 45, 45, 0.4);
-}
-
 @media (max-width: 768px) {
-  /* Umum */
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
-
   .container {
     padding: 0 15px;
   }
-
-  /* PRODUCTS */
   .products {
     padding: 60px 0;
   }
-
   .products-grid {
-    grid-template-columns: 1fr; /* 1 kolom */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
   .product-card {
     padding: 1rem;
   }
-
   .product-image {
-    height: 180px; /* lebih kecil */
+    height: 180px;
   }
-
   .product-card h3 {
     font-size: 1.1rem;
   }
-
   .product-price {
     font-size: 1.2rem;
   }
-
   .add-to-cart {
     padding: 8px 16px;
     font-size: 0.9rem;
   }
-
-  /* CART SECTION */
   .cart-section {
     padding: 50px 0;
   }
-
   .cart-content {
-    grid-template-columns: 1fr; /* jadi 1 kolom */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
   .cart-table th,
   .cart-table td {
     display: none;
   }
-
   .item-info img {
     width: 40px;
     height: 40px;
   }
-
   .qty-box button {
     width: 15px;
     height: 20px;
   }
-
   .qty-input {
     width: 15px;
   }
-
-  /* Cart summary */
   .cart-summary {
     padding: 1rem;
   }
-
   .cart-summary h3 {
     font-size: 1.2rem;
   }
-
   .summary-row {
     font-size: 0.9rem;
   }
-
   .checkout-button {
     padding: 10px;
     font-size: 0.95rem;
   }
-
-  /* NOTIFICATION */
   #notifContainer {
     top: 80px;
     right: 10px;
   }
-
   .notifAlert {
     padding: 0.8rem 1rem;
     font-size: 0.9rem;

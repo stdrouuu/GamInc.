@@ -1,8 +1,7 @@
+<?php session_start(); ?>
 <?php include('components/head.php'); ?>
 
 <body>
-    <div class="container-fluid">
-
         <?php
             $page = 'auth'; 
             $content = "pages/auth.php"; 
@@ -30,6 +29,11 @@
                     case "credits": 
                         $content = "pages/credits.php"; 
                         break;
+
+                    case "favorites":
+                        $content = "pages/favorites.php";
+                        break;
+
                     default:
                         $content = "pages/main.php";
                 }
@@ -37,7 +41,7 @@
         ?>
 
         <?php
-        if ($page != 'user' && $page != 'auth' && $page != 'credits' && $page != 'gameview') {
+        if ($page != 'user' && $page != 'auth' && $page != 'credits' && $page != 'gameview' && $page != 'favorites') {
             include('components/navbar.php');
         }
         ?>
@@ -49,11 +53,10 @@
         </section>
 
         <?php 
-        if ($page != 'auth' && $page != 'user' && $page != 'gameview' && $page != 'credits') {
+        if ($page != 'auth' && $page != 'user' && $page != 'gameview' && $page != 'credits' && $page != 'favorites') {
             include('components/footer.php');
         }
         ?>
 
-    </div>
 </body>
 </html>

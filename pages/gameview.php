@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="./assets/css/gameview-style.css">
 
-<a href="index.php?page=product" class="back-button">
-    <i class="fas fa-arrow-left"></i>
-    <span>Back</span>
-</a>
+
+    <a href="index.php?page=product" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back</span>
+    </a>
 
 <div class="product-card">
     <div class="product-gallery">
@@ -14,7 +15,6 @@
 
     <div class="product-details">
         <p class="product-brand" id="productBrand">Product Brand</p>
-
         <h1 class="product-title" id="productTitle">Product Title</h1>
 
         <div class="price-section">
@@ -22,11 +22,8 @@
         </div>
 
         <hr>
-
-        <p class="description" id="description">-</p>
-
-        <button class="add-to-cart" id="addToCart" onclick=addToCart();>ADD TO CART</button>
-
+            <p class="description" id="description">-</p>
+            <button class="add-to-cart" id="addToCart" onclick="addToCart();">ADD TO CART</button>
         <hr>
 
         <div class="metadata">
@@ -36,15 +33,14 @@
         </div>
 
         <div class="social-share">
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" onclick="toggleFavorite(); return false;"><i class="fa-regular fa-heart" id="favIcon"></i></a>
             <a href="index.php?page=product#cart"><i class="fa-solid fa-shopping-cart"></i></a>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="index.php?page=favorites"><i class="fa-solid fa-bookmark"></i></a>
         </div>
     </div>
 </div>
 
 <div id="notifContainer"></div>
 
-<script src="assets/js/array.js"></script>
 <script src="assets/js/gameview.js"></script>
 <script src="assets/js/thtoggle.js"></script>

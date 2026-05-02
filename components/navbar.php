@@ -6,7 +6,7 @@
           <i class="fa-solid fa-puzzle-piece"></i>
           <strong>Gam<span style="color: #00ccc5ff">Inc.</span></strong>
         </div>
-     
+  
         <div class="nav-user">
           <a class="user-icon" onclick="toggleTheme()">
             <i class="fa-solid fa-toggle-off"></i>
@@ -30,18 +30,23 @@
             <a href="index.php?page=credits" class="nav-link">Credits</a>
           </li>
         </ul>
-             
-
+          
 
         <div class="search-bar">
-          <input type="text" placeholder="Cari game, item, atau top-up..." />
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          <input type="text" id="searchInput" placeholder="Cari game, item, atau top-up..." />
+          <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="nav-cart">
+          <a href="index.php?page=favorites" class="cart-icon" title="Favorites" style="color: #ff4d4d;">
+            <i class="fas fa-heart"></i>
+          </a>
         </div>
 
         <div class="nav-cart">
           <a href="index.php?page=product#cart" class="cart-icon">
             <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">2</span>
+            <span class="cart-count">0</span>
           </a>
         </div>
 
@@ -65,6 +70,7 @@
           <a href="index.php?page=main#about">About</a>
           <a href="index.php?page=main#contact">Contact</a>
           <a href="index.php?page=product">Products</a>
+          <a href="index.php?page=favorites">Favorites</a>
           <a href="index.php?page=credits">Credits</a>
       </div>
     </div>
@@ -72,3 +78,37 @@
 
     <script src="assets/js/navhamburger.js"></script>
     <script src="assets/js/thtoggle.js"></script>
+
+    <script>
+        // Update cart count on navbar load
+        $(document).ready(function() {
+            $.ajax({
+                url: 'api/cart.php?action=getCount',
+                type: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    $('.cart-count').text(response.cartCount);
+                }
+            });
+
+            // Search bar functionality
+            $('#searchBtn').click(function() {
+                doSearch();
+            });
+
+            $('#searchInput').keypress(function(e) {
+                if (e.which == 13) {
+                    doSearch();
+                }
+            });
+        });
+
+        // Search function - redirect to product page with search results
+        function doSearch() {
+            var keyword = $('#searchInput').val().trim();
+            if (keyword == '') return;
+
+            // Redirect to product page and pass search keyword
+            window.location.href = 'index.php?page=product&search=' + encodeURIComponent(keyword);
+        }
+    </script>
