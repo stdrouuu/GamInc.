@@ -115,6 +115,10 @@ function addToCart(productId) {
         // Update cart count in navbar
         $(".cart-count").text(response.cartCount);
         notifAlert("Product added to cart!");
+        // Automatically slide open the global Cart Sidebar Drawer
+        if (typeof openCartSidebar === "function") {
+          openCartSidebar();
+        }
       }
     },
   });

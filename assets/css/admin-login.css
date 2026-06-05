@@ -23,7 +23,7 @@ body {
 }
 .login-box {
   width: 90%;
-  max-width: 400px;
+  max-width: 440px;
   padding: 50px 40px;
   background: var(--bg-card);
   backdrop-filter: blur(20px);
@@ -32,19 +32,27 @@ body {
   border: 1px solid var(--border);
   text-align: center;
 }
-h2 {
+.login-box h2 {
   color: var(--text-main);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 600;
   font-size: 1.8rem;
   letter-spacing: -0.5px;
 }
-p {
+.login-box .subtitle {
   color: var(--text-muted);
   margin-bottom: 40px;
   font-size: 0.95rem;
 }
-input {
+.login-box .admin-icon {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login-box .admin-icon i {
+  font-size: 3rem;
+  color: var(--text-main);
+}
+.login-box input {
   width: 100%;
   padding: 16px;
   margin-bottom: 16px;
@@ -55,16 +63,15 @@ input {
   font-size: 1rem;
   transition: all 0.3s ease;
 }
-input:focus {
+.login-box input:focus {
   outline: none;
   border-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
 }
-button {
+.login-box button {
   width: 100%;
   padding: 16px;
   margin-top: 10px;
-  margin-bottom: 16px;
   border: none;
   border-radius: 12px;
   background-color: var(--primary);
@@ -74,11 +81,11 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-button:hover {
+.login-box button:hover {
   transform: translateY(-2px);
   opacity: 0.9;
 }
-.error {
+.error-msg {
   color: #ef4444;
   margin-bottom: 20px;
   display: none;
@@ -87,4 +94,16 @@ button:hover {
   background: rgba(239, 68, 68, 0.1);
   padding: 10px;
   border-radius: 8px;
+}
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+.back-link:hover {
+  color: var(--text-main);
 }

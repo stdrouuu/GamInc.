@@ -1,0 +1,372 @@
+/* =============================================
+   orders-style.css — GamInc. My Orders Page
+   ============================================= */
+
+:root {
+  --bg-dark: #0d0f12;
+  --card-dark: rgba(255, 255, 255, 0.035);
+  --border: rgba(255, 255, 255, 0.08);
+  --text-light: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent: #00e5ff;
+  --blur: blur(20px);
+}
+.light-mode {
+  --bg-dark: #f4f4f5;
+  --card-dark: rgba(0, 0, 0, 0.03);
+  --border: rgba(0, 0, 0, 0.08);
+  --text-light: #09090b;
+  --text-secondary: #71717a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Plus Jakarta Sans", sans-serif; transition: background-color 0.3s, color 0.3s; }
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ── Back Button ─────────────────────────────── */
+.back-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  padding: 10px 18px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+.back-button:hover { background-color: var(--text-light); color: var(--bg-dark); }
+.back-button:hover i { color: var(--bg-dark); }
+
+/* ── Page Container ──────────────────────────── */
+.orders-page {
+  max-width: 700px;
+  margin: 110px auto 80px;
+  padding: 0 20px;
+}
+
+.orders-page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+/* ── Filter Tabs ─────────────────────────────── */
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.filter-tab {
+  padding: 8px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.filter-tab:hover { border-color: rgba(255,255,255,0.2); color: var(--text-light); }
+.filter-tab.active {
+  background: var(--text-light);
+  color: var(--bg-dark);
+  border-color: var(--text-light);
+}
+.light-mode .filter-tab.active {
+  background: #09090b;
+  color: #fff;
+  border-color: #09090b;
+}
+
+/* ── Order Cards ─────────────────────────────── */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: var(--blur);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.order-card:hover { border-color: rgba(255,255,255,0.16); transform: translateY(-2px); }
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.order-id {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.order-date {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* ── Status Badge ────────────────────────────── */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.status-pending    { background: rgba(251,191,36,0.15);  color: #fbbf24; }
+.status-processing { background: rgba(0,229,255,0.12);   color: #00e5ff; }
+.status-shipped    { background: rgba(139,92,246,0.15);  color: #a78bfa; }
+.status-delivered  { background: rgba(68,239,134,0.15);  color: #44ef86; }
+
+/* ── Delivery Progress Bar ───────────────────── */
+.delivery-progress {
+  padding: 18px 20px;
+}
+
+.progress-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Connecting line behind steps */
+.progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.progress-fill {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, #44ef86, #00e5ff);
+  z-index: 1;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.step-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: all 0.4s ease;
+  box-shadow: 0 0 0 4px var(--bg-dark);
+}
+
+.progress-step.done .step-dot {
+  background: #44ef86;
+  border-color: #44ef86;
+  color: #000;
+}
+.progress-step.active .step-dot {
+  background: #00e5ff;
+  border-color: #00e5ff;
+  color: #000;
+  box-shadow: 0 0 0 4px var(--bg-dark), 0 0 12px rgba(0,229,255,0.4);
+  animation: pulseDot 1.8s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 4px var(--bg-dark), 0 0 10px rgba(0,229,255,0.35); }
+  50%       { box-shadow: 0 0 0 4px var(--bg-dark), 0 0 22px rgba(0,229,255,0.65); }
+}
+
+.step-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 60px;
+}
+.progress-step.done .step-label,
+.progress-step.active .step-label {
+  color: var(--text-light);
+}
+
+/* ── Order Footer ─────────────────────────────── */
+.order-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px 18px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.order-total {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+.order-items-count {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.btn-view-detail {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  color: var(--text-light);
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-view-detail:hover { background: var(--text-light); color: var(--bg-dark); }
+
+/* ── Order Items Detail (Expandable) ─────────── */
+.order-items-detail {
+  display: none;
+  padding: 0 20px 18px;
+  border-top: 1px solid var(--border);
+  gap: 10px;
+  flex-direction: column;
+}
+.order-items-detail.open { display: flex; }
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.order-item-row img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+.order-item-name {
+  flex: 1;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+.order-item-qty {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.order-item-price {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+/* ── Empty State ─────────────────────────────── */
+.empty-orders {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-secondary);
+}
+.empty-orders i {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+.empty-orders h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+.empty-orders p { font-size: 0.9rem; }
+.empty-orders .btn-shop {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: var(--text-light);
+  color: var(--bg-dark);
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+.empty-orders .btn-shop:hover { opacity: 0.8; }
+
+/* ── Loading Skeleton ─────────────────────────── */
+.skeleton-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.skeleton-line {
+  height: 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.04) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 480px) {
+  .orders-page { margin-top: 90px; padding: 0 14px; }
+  .step-label { font-size: 0.62rem; max-width: 50px; }
+  .step-dot { width: 30px; height: 30px; font-size: 0.75rem; }
+  .progress-steps::before { top: 15px; }
+  .progress-fill { top: 15px; }
+}

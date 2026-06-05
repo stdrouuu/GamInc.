@@ -1,0 +1,244 @@
+/* =============================================
+   complaint-style.css — GamInc. Complaint Form
+   ============================================= */
+
+:root {
+  --bg-dark: #0d0f12;
+  --card-dark: rgba(255, 255, 255, 0.035);
+  --border: rgba(255, 255, 255, 0.08);
+  --text-light: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent: #00e5ff;
+  --blur: blur(20px);
+}
+.light-mode {
+  --bg-dark: #f4f4f5;
+  --card-dark: rgba(0, 0, 0, 0.03);
+  --border: rgba(0, 0, 0, 0.08);
+  --text-light: #09090b;
+  --text-secondary: #71717a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Plus Jakarta Sans", sans-serif; transition: background-color 0.3s, color 0.3s; }
+
+body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+
+/* ── Back Button ─────────────────────────────── */
+.back-button {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  padding: 10px 18px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+.back-button:hover { background-color: var(--text-light); color: var(--bg-dark); }
+.back-button:hover i { color: var(--bg-dark); }
+
+/* ── Page Container ──────────────────────────── */
+.complaint-page {
+  max-width: 600px;
+  margin: 110px auto 80px;
+  padding: 0 20px;
+}
+
+/* ── Header Card ─────────────────────────────── */
+.complaint-header {
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  backdrop-filter: var(--blur);
+}
+
+.complaint-header-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: rgba(251,191,36,0.12);
+  color: #fbbf24;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.complaint-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 6px;
+}
+
+.complaint-header p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+/* ── Form Card ───────────────────────────────── */
+.complaint-form-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 24px;
+  backdrop-filter: var(--blur);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.light-mode .form-group select,
+.light-mode .form-group input,
+.light-mode .form-group textarea {
+  background: rgba(0,0,0,0.03);
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.05);
+}
+
+.form-group select option {
+  background: #1a1c20;
+  color: #fff;
+}
+.light-mode .form-group select option {
+  background: #f4f4f5;
+  color: #09090b;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.6;
+}
+
+.form-hint {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* ── Submit Button ───────────────────────────── */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--text-light);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.btn-submit:hover { opacity: 0.85; transform: translateY(-1px); }
+.btn-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* ── Success State ───────────────────────────── */
+.complaint-success {
+  display: none;
+  background: var(--card-dark);
+  border: 1px solid rgba(68,239,134,0.3);
+  border-radius: 20px;
+  padding: 48px 24px;
+  text-align: center;
+  backdrop-filter: var(--blur);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(68,239,134,0.15);
+  color: #44ef86;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.complaint-success h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.complaint-success p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.btn-back-home {
+  display: inline-block;
+  padding: 11px 28px;
+  background: var(--text-light);
+  color: var(--bg-dark);
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+.btn-back-home:hover { opacity: 0.8; }
+
+@media (max-width: 480px) {
+  .complaint-page { margin-top: 90px; padding: 0 14px; }
+}

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/css/credits-style.css" />
+<link rel="stylesheet" href="./assets/css/credits-style.css?v=<?= time(); ?>" />
 
 
     <a href="index.php?page=main" class="back-button">

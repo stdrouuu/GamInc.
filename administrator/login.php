@@ -7,99 +7,10 @@
     <title>Admin Login | GamInc.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="./../assets/css/admin-login.css?v=<?= time(); ?>" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0a0a0a;
-            color: #fff;
-        }
-        .login-box {
-            width: 90%;
-            max-width: 400px;
-            padding: 40px;
-            background: #141414;
-            border-radius: 12px;
-            border: 1px solid #222;
-        }
-        .login-box h2 {
-            color: #00e6e0;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-        .login-box .subtitle {
-            color: #aaa;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-        }
-        .login-box .admin-icon {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .login-box .admin-icon i {
-            font-size: 3rem;
-            color: #00e6e0;
-        }
-        .login-box input {
-            width: 100%;
-            padding: 0.9rem;
-            margin-bottom: 1rem;
-            border: none;
-            border-radius: 6px;
-            background-color: #1b1b1b;
-            color: #fff;
-            transition: outline 0.3s ease;
-        }
-        .login-box input:focus {
-            outline: 1px solid #00e6e0;
-            box-shadow: 0 0 5px rgba(0, 230, 224, 0.5);
-        }
-        .login-box button {
-            width: 100%;
-            padding: 0.9rem;
-            border: none;
-            border-radius: 6px;
-            background-color: #00e6e0;
-            color: #000;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-        }
-        .login-box button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 230, 224, 0.4);
-        }
-        .error-msg {
-            color: #ff4d4d;
-            margin-bottom: 15px;
-            display: none;
-            text-align: left;
-            font-size: 0.85rem;
-        }
-        .back-link {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            color: #aaa;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        .back-link:hover {
-            color: #00e6e0;
-        }
-    </style>
 </head>
 <body>
 
@@ -116,7 +27,7 @@
         <input type="password" id="adminPassword" placeholder="Password" />
         <button id="adminLoginBtn">Log In</button>
 
-        <a href="../index.php?page=main" class="back-link">
+        <a href="../index.php?page=home" class="back-link">
             <i class="fas fa-arrow-left"></i> Back to Website
         </a>
     </div>

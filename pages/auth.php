@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/css/auth-style.css" />
+<link rel="stylesheet" href="./assets/css/auth-style.css?v=<?= time(); ?>" />
 
 
 <body>

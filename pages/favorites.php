@@ -1,121 +1,143 @@
-<link rel="stylesheet" href="./assets/css/product-style.css" />
+<link rel="stylesheet" href="./assets/css/product-style.css?v=<?= time(); ?>" />
 
 <style>
     .favorites-container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 100px 20px 60px;
+        padding: 120px 30px 60px;
     }
     .favorites-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
         margin-top: 2rem;
     }
     .fav-card {
-        background: var(--card-bg, #1a1a1a);
-        border-radius: 15px;
-        padding: 1.5rem;
-        text-align: center;
-        border: 1px solid var(--card-border, #333);
-        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 24px;
+        text-align: left;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
     }
     .fav-card:hover {
         transform: translateY(-5px);
-        border-color: var(--accent-color, #00e6e0);
+        background: rgba(255, 255, 255, 0.06);
     }
     .fav-card img {
         width: 100%;
-        height: 250px;
+        height: 380px;
         object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1rem;
+        border-radius: 16px;
+        margin-bottom: 20px;
     }
     .fav-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 8px;
         color: var(--text-main, #fff);
     }
     .fav-card .fav-price {
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: var(--accent-color, #00e6e0);
-        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-muted, #a1a1aa);
+        margin-bottom: 24px;
     }
     .fav-actions {
         display: flex;
-        gap: 10px;
-        justify-content: center;
+        gap: 12px;
+        justify-content: stretch;
+        margin-top: auto;
     }
     .btn-view {
-        background: transparent;
-        color: var(--accent-color, #00e6e0);
-        border: 2px solid var(--accent-color, #00e6e0);
-        padding: 8px 18px;
-        border-radius: 25px;
+        background: rgba(255,255,255,0.05);
+        color: var(--text-main, #fff);
+        border: none;
+        padding: 12px 20px;
+        border-radius: 24px;
         cursor: pointer;
-        font-weight: 600;
+        font-weight: 500;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         transition: all 0.3s ease;
+        flex: 1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .btn-view:hover {
-        background: var(--accent-color, #00e6e0);
-        color: #000;
+        background: var(--text-main, #fff);
+        color: var(--bg-body, #0d0f12);
     }
     .btn-remove-fav {
-        background: transparent;
-        color: #ff4d4d;
-        border: 2px solid #ff4d4d;
-        padding: 8px 18px;
-        border-radius: 25px;
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 24px;
         cursor: pointer;
-        font-weight: 600;
-        font-size: 0.9rem;
+        font-weight: 500;
+        font-size: 0.95rem;
         transition: all 0.3s ease;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
     }
     .btn-remove-fav:hover {
-        background: #ff4d4d;
+        background: #ef4444;
         color: #fff;
     }
     .empty-favorites {
         text-align: center;
-        padding: 60px 20px;
-        color: #aaa;
+        padding: 80px 20px;
+        color: var(--text-muted, #a1a1aa);
+        grid-column: 1 / -1;
     }
     .empty-favorites i {
         font-size: 4rem;
-        color: #333;
-        margin-bottom: 15px;
+        color: var(--text-muted, #a1a1aa);
+        margin-bottom: 20px;
     }
     .empty-favorites p {
         font-size: 1.1rem;
+        line-height: 1.6;
     }
     .back-button {
         position: fixed;
-        top: 25px;
-        left: 20px;
+        top: 30px;
+        left: 30px;
         z-index: 900;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1rem;
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 8px;
-        background-color: rgba(0, 230, 224, 0.1);
-        border: none;
+        color: var(--text-main, #fff);
+        padding: 12px 20px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         transition: all 0.3s ease;
     }
     .back-button i {
-        color: #00e6e0;
+        color: var(--text-main, #fff);
     }
     .back-button:hover {
-        background-color: rgba(0, 230, 224, 0.3);
-        color: #00e6e0;
+        background-color: var(--text-main, #fff);
+        color: var(--bg-body, #0d0f12);
         transform: translateX(-3px);
+    }
+    .back-button:hover i {
+        color: var(--bg-body, #0d0f12);
     }
 </style>
 

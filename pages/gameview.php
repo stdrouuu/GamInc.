@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/css/gameview-style.css">
+<link rel="stylesheet" href="./assets/css/gameview-style.css?v=<?= time(); ?>">
 
 
     <a href="index.php?page=product" class="back-button">

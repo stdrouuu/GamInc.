@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/css/main-style.css" />
+<link rel="stylesheet" href="./assets/css/main-style.css?v=<?= time(); ?>" />
 
 
     <!-- bootsrap carousel -->
@@ -135,6 +135,8 @@
       </div>
     </div>
 
+
+
     <!-- best selling games -->
       <div class="container">
         <h2 class="section-title">Best-Selling Games</h2>
@@ -163,7 +165,7 @@
               </div>
             </div>
 
-            <div class="grid-item">
+            <div class="grid-item banner-grid-item">
               <a href="index.php?page=gameview&id=20">
                 <img src="./assets/img/banner2.jpg"/>
               </a>
@@ -274,7 +276,7 @@
 
         <!-- Admin Login Link -->
         <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
-          <a href="admin/login.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">
+          <a href="administrator/login.php" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: all 0.3s ease;">
             <i class="fas fa-user-shield"></i> Administrator Login
           </a>
         </div>
