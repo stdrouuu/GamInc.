@@ -1,4 +1,4 @@
-# GamInc - E-Commerce Game Store
+# Gaminc - E-Commerce Game Store
 
 GamInc is a premium game store web application. It features a fully responsive catalog, interactive shopping cart, favorites management, customer complaints section, checkout workflow, and a robust admin dashboard for store managers.
 
