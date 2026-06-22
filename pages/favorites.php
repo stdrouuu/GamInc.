@@ -8,11 +8,12 @@
     </a>
 
 <div class="favorites-container">
-    <h2 class="section-title">My 
-        <span style="color: #BDB2FF">Favorites</span>
-    </h2>
+    <div class="catalog-header" style="text-align: left; margin-bottom: 40px;">
+        <h1 class="catalog-title" style="font-size: 2.5rem;">My Favorites</h1>
+        <p class="catalog-desc">Your curated list of essential gear.</p>
+    </div>
     
-    <div class="favorites-grid" id="favoritesGrid">
+    <div class="products-grid" id="favoritesGrid">
         <!-- favorites loaded via AJAX -->
     </div>
 </div>

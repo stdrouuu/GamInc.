@@ -10,7 +10,7 @@ $userName = $isLoggedIn ? $_SESSION['user_name'] : '';
         <div class="nav-group-left" style="display: flex; align-items: center; gap: 36px;">
           <div class="nav-logo" onclick="window.location.href='main'" style="cursor: pointer;">
             <i class="fa-solid fa-shapes"></i>
-           <strong>Gam<span style="font-weight: 900; color: #A0C4FF;">i</span><span style="font-weight: 900; color: #BDB2FF;">n</span><span style="font-weight: 900; color: #E8AEFF;">c</span></strong>
+           <strong>GamInc.</strong>
 
           </div>
     
@@ -54,7 +54,7 @@ $userName = $isLoggedIn ? $_SESSION['user_name'] : '';
           <div class="nav-user" style="display: flex; align-items: center;">
             <?php if ($isLoggedIn): ?>
               <span class="nav-greeting" style="color: var(--text-primary); font-size: 0.95rem; font-weight: 500; margin-right: 12px; white-space: nowrap;">
-                Hello, <span style="color: #BDB2FF;"><?= htmlspecialchars($userName)?></span>
+                Hello, <span><?= htmlspecialchars($userName)?></span>
               </span>
               <a href="user" class="user-icon" title="Profile">
                 <i class="fa-regular fa-user"></i>

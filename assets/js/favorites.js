@@ -20,24 +20,19 @@ function loadFavorites() {
       }
 
       items.forEach(function (item) {
-        var card = '<div class="fav-card">';
+        var card = '<div class="product-item">';
+        card += '<a href="product/' + item.id + '" class="product-img-wrapper">';
         card += '<img src="' + item.image + '" alt="' + item.name + '">';
-        card += "<h3>" + item.name + "</h3>";
-        card +=
-          '<div class="fav-price">Rp ' +
-          parseInt(item.price).toLocaleString("id-ID") +
-          "</div>";
-        card += '<div class="fav-actions">';
-        card +=
-          '<a href="product/' +
-          item.id +
-          '" class="btn-view">View</a>';
-        card +=
-          '<button class="btn-remove-fav" onclick="removeFavorite(' +
-          item.fav_id +
-          ')">Remove</button>';
-        card += "</div>";
-        card += "</div>";
+        card += '</a>';
+        card += '<div class="product-info">';
+        card += '<a href="product/' + item.id + '"><h3>' + item.name + '</h3></a>';
+        card += '<p class="product-price">Rp ' + parseInt(item.price).toLocaleString("id-ID") + '</p>';
+        card += '<div class="product-actions">';
+        card += '<a href="product/' + item.id + '" class="btn-list" style="text-decoration:none;">View</a>';
+        card += '<button class="btn-fav" style="color: #ef4444;" onclick="removeFavorite(' + item.fav_id + ')"><i class="fa-solid fa-trash"></i></button>';
+        card += '</div>';
+        card += '</div>';
+        card += '</div>';
 
         grid.append(card);
       });

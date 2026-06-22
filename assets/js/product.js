@@ -120,47 +120,22 @@ function createProductCard(product, isFavorited) {
     badge = '<span class="badge other">OTHER</span>';
   }
 
-  var html =
-    '<a href="product/' + product.id + '" class="product-card-link">';
-  html += '<div class="product-card">';
-  html += '<div class="product-image">';
-  html +=
-    '<img src="' +
-    product.image +
-    '" alt="' +
-    product.name +
-    '" class="product-img">';
-  html +=
-    '<div class="product-image-overlay"><span>Klik Untuk Lihat Selengkapnya ></span></div>';
-  html += badge;
-  html += "</div>";
-  html += "<h3>" + product.name + "</h3>";
-  html +=
-    '<div class="product-price">Rp ' +
-    parseInt(product.price).toLocaleString("id-ID") +
-    "</div>";
-
-  html += '<div class="product-actions-row">';
-  html +=
-    '<button class="add-to-cart" onclick="addToCart(' +
-    product.id +
-    '); return false;">Add to Cart</button>';
-  html +=
-    '  <button class="fav-btn-action" onclick="toggleProductFavorite(event, ' +
-    product.id +
-    '); return false;">';
-  html +=
-    '    <i class="' +
-    (isFavorited ? "fa-solid fa-heart" : "fa-regular fa-heart") +
-    '" id="favIcon-' +
-    product.id +
-    '"' +
-    (isFavorited ? ' style="color: #E8AEFF;"' : "") +
-    "></i>";
-  html += "  </button>";
-  html += "</div>";
-
-  html += "</div></a>";
+  var html = '<div class="product-item">';
+  html += '<a href="product/' + product.id + '" class="product-img-wrapper">';
+  html += '<img src="' + product.image + '" alt="' + product.name + '">';
+  if (badge) html += '<div class="badge-container">' + badge + '</div>';
+  html += '</a>';
+  html += '<div class="product-info">';
+  html += '<a href="product/' + product.id + '"><h3>' + product.name + '</h3></a>';
+  html += '<p class="product-price">Rp ' + parseInt(product.price).toLocaleString("id-ID") + '</p>';
+  html += '<div class="product-actions">';
+  html += '<button class="btn-list" onclick="addToCart(' + product.id + '); return false;">Add to Cart</button>';
+  html += '<button class="btn-fav" onclick="toggleProductFavorite(event, ' + product.id + '); return false;">';
+  html += '<i class="' + (isFavorited ? "fa-solid fa-heart active-heart" : "fa-regular fa-heart") + '" id="favIcon-' + product.id + '"></i>';
+  html += '</button>';
+  html += '</div>';
+  html += '</div>';
+  html += '</div>';
 
   return html;
 }

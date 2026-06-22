@@ -7,7 +7,7 @@
       <!-- Left Column: Branding and Contact Details -->
       <div class="footer-col footer-col-brand">
         <h2 class="footer-brand-title">
-          Gam<span style="font-weight: 900; color: #A0C4FF;">i</span><span style="font-weight: 900; color: #BDB2FF;">n</span><span style="font-weight: 900; color: #E8AEFF;">c.</span>
+          GamInc.
         </h2>
         
         <p class="footer-brand-desc">
