@@ -39,7 +39,7 @@ GamInc is a premium game store web application. It features a fully responsive c
 ## Local Installation Guide
 
 ### Prerequisites
-1. Local server environment like **Laragon** (highly recommended) or **XAMPP**.
+1. Local web server environment like **Laragon** (highly recommended).
 2. PHP version 7.4 or higher.
 3. MySQL Database.
 
@@ -47,7 +47,6 @@ GamInc is a premium game store web application. It features a fully responsive c
 1. **Clone/Copy Project:**
    Place the project folder `412024022_BRANDON_JEREMIAH` in your local server root directory:
    * **Laragon:** `C:\laragon\www\`
-   * **XAMPP:** `C:\xampp\htdocs\`
 
 2. **Import Database:**
    * Open **phpMyAdmin** or your preferred database client (HeidiSQL/DBeaver).
